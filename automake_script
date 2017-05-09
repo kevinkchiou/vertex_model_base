@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#First, check to make sure Makefile.am contains all files and flags
+
+# create configure script: runs autoconf, autoheader, automake, aclocal, libtoolize
+autoreconf
+
+# create ensure Makefile.in is created properly ignoring AC_HEADERS
+automake -vfi
+
+# create Makefile
+./configure

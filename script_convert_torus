@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+set -x
+
+x=0
+y=0
+
+while [ $x -lt 1000 ]; do
+	a=`printf "./svgs/%04d.svg" $x`
+	b=`printf "./jpgs/%04d_torus.tif" $y`
+	convert $a $b
+	echo `printf "converted %s to %s" $a $b`;
+	let x="x+1"
+	let y="y+1"
+done

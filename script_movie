@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#requires libav to create encoded movie from img seq
+avconv -framerate 30 -f image2 -i %04d.jpeg -c:v h264 -crf 1 out.mov

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ROOT_DIR=`cd .. ; pwd`;
+
+rm -f $ROOT_DIR/*.o; rm -f $ROOT_DIR/*.Po; rm -f $ROOT_DIR/svgs/*.svg $ROOT_DIR/info/*.*info $ROOT_DIR/dats/*.dat $ROOT_DIR/jpgs/*.jpg;
